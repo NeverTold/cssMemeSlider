@@ -1,11 +1,28 @@
+/*body {
+    overflow-x: hidden;
+}*/
 .meme {
     max-width: 100%;
+    background-color: #25282a;
 }
 .wrapper {
-    padding: 1rem 2rem 2rem 1rem;
+    padding: 1rem 2rem 1rem 2rem;
 }
-.meme-img {
+.meme-img-wrapper {
+    width: 94vw;
+    overflow: hidden;
+}
+.meme-img-list {
+    display: flex;
+    flex-direction: row;
+    
+    flex-wrap: nowrap;
     border-radius: 1rem;
+}
+.img img {
+    border-radius: 1rem;
+    max-width: 90vw ;
+    max-height: 60vh;
 }
 .meme-context {
     display: flex;
@@ -18,7 +35,18 @@
     justify-content: space-between;
 }
 .slider-item {
-
+    border: 2px solid transparent;
+    padding: 0.5em;
+    border-radius: 25px;
+    border-color: #71abff;
+    background-color: #71abff;
+}
+.slider-item:hover {
+    border-color: #ffffff;
+    background-color: #ffffff;
+}
+.slider-item-active {
+    padding: 0.5em 0.5em;
 }
 .meme-text {
     
