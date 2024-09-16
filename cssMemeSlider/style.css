@@ -1,3 +1,7 @@
+p {
+    width: 100%;
+    color: #ffffff;
+}
 .meme {
     max-width: 100%;
     background-color: #25282a;
@@ -24,6 +28,7 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    overflow: hidden;
 }
 .slider {
     display: flex;
@@ -53,11 +58,18 @@
 	margin-right: 0.625rem;
     
 }
-.meme-text {
-    display: flex;
+.meme-text-wrapper {
+    min-width: 88vw;
     overflow: hidden;
 }
-
+.meme-text {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.text {
+    min-width: 89vw;
+    text-wrap: nowrap;
+}
 #first-pagginator:checked~.meme-img-wrapper > .meme-img-list {
     transform: translateX(0);
 }
@@ -76,4 +88,16 @@
 #third-pagginator:checked~.meme-context > .slider > .slider-item:nth-child(3) label,
 #fourth-pagginator:checked~.meme-context > .slider > .slider-item:last-child label {
     background-color: transparent;
+}
+#first-pagginator:checked~ .meme-context > .meme-text-wrapper > .meme-text {
+    transform: translateX(0);
+}
+#second-pagginator:checked~ .meme-context > .meme-text-wrapper > .meme-text {
+    transform: translateX(-100%);
+}
+#third-pagginator:checked~.meme-context > .meme-text-wrapper > .meme-text {
+    transform: translateX(-200%);
+}
+#fourth-pagginator:checked~.meme-context > .meme-text-wrapper > .meme-text {
+    transform: translateX(-301%);
 }
