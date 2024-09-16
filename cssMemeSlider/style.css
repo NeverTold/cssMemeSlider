@@ -6,25 +6,25 @@
     padding: 1rem 2rem 1rem 2rem;
 }
 .meme-img-wrapper {
-    width: 94vw;
+    width: 96vw;
     overflow: hidden;
 }
 .meme-img-list {
     display: flex;
     flex-direction: row;
-    
-    flex-wrap: nowrap;
-    border-radius: 1rem;
+    transition: transform 0.5s ease-in-out;
+    width: 400%;
+    /*flex-wrap: nowrap;*/
 }
 .img img {
     border-radius: 1rem;
-    min-width: 94vw ;
+    min-width: 96vw ;
     max-height: 60vh;
 }
 .meme-context {
     display: flex;
     flex-direction: row-reverse;
-    justify-content:center
+    justify-content: space-between;
 }
 .slider {
     display: flex;
@@ -32,15 +32,15 @@
     justify-content: space-between;
     
 }
-.slider input[type=radio] {
+.meme-img-wrapper input[type=radio] {
 	display: none;
 }
 .slider-item label {
 	display: inline-block;
 	cursor: pointer;
-	border: 2px solid transparent;
+	border: 0.2em solid transparent;
     padding: 0.5em;
-    border-radius: 25px;
+    border-radius: 1.5rem;
     border-color: #71abff;
     background-color: #71abff;
 }
@@ -53,9 +53,22 @@
 }
 .slider-item {
     display: inline-block;
-	margin-right: 10px;
+	margin-right: 0.625rem;
     
 }
 .meme-text {
     
+}
+
+#first-pagginator:checked~.meme-img-list {
+    transform: translateX(0);
+}
+#second-pagginator:checked~.meme-img-list {
+    transform: translateX(-25%);
+}
+#third-pagginator:checked~.meme-img-list {
+    transform: translateX(-50%);
+}
+#fourth-pagginator:checked~.meme-img-list {
+    transform: translateX(-75%);
 }
