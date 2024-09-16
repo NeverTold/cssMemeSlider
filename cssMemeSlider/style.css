@@ -14,7 +14,6 @@
     flex-direction: row;
     transition: transform 0.5s ease-in-out;
     width: 400%;
-    /*flex-wrap: nowrap;*/
 }
 .img img {
     border-radius: 1rem;
@@ -32,7 +31,7 @@
     justify-content: space-between;
     
 }
-.meme-img-wrapper input[type=radio] {
+.wrapper input[type=radio] {
 	display: none;
 }
 .slider-item label {
@@ -48,27 +47,33 @@
     border-color: #ffffff;
     background-color: #ffffff;
 }
-.slider-item input[type=radio]:checked + label {
-    background-color: transparent;
-}
+
 .slider-item {
     display: inline-block;
 	margin-right: 0.625rem;
     
 }
 .meme-text {
-    
+    display: flex;
+    overflow: hidden;
 }
 
-#first-pagginator:checked~.meme-img-list {
+#first-pagginator:checked~.meme-img-wrapper > .meme-img-list {
     transform: translateX(0);
 }
-#second-pagginator:checked~.meme-img-list {
+#second-pagginator:checked~.meme-img-wrapper > .meme-img-list {
     transform: translateX(-25%);
 }
-#third-pagginator:checked~.meme-img-list {
+#third-pagginator:checked~.meme-img-wrapper > .meme-img-list {
     transform: translateX(-50%);
 }
-#fourth-pagginator:checked~.meme-img-list {
+#fourth-pagginator:checked~.meme-img-wrapper > .meme-img-list {
     transform: translateX(-75%);
+}
+
+#first-pagginator:checked~ .meme-context > .slider > .slider-item:first-child label,
+#second-pagginator:checked~ .meme-context > .slider > .slider-item:nth-child(2) label,
+#third-pagginator:checked~.meme-context > .slider > .slider-item:nth-child(3) label,
+#fourth-pagginator:checked~.meme-context > .slider > .slider-item:last-child label {
+    background-color: transparent;
 }
