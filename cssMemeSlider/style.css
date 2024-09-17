@@ -39,6 +39,20 @@ p {
     justify-content: space-between;
     
 }
+.area {
+    border: 0.2em solid transparent;
+    padding: 0.5em;
+    border-radius: 1.5rem;
+    border-color: #71abff;
+    background-color: #71abff;
+}
+.slider label {
+    cursor: pointer;
+}
+.slider label:hover .area{
+    border-color: #ffffff;
+    background-color: #ffffff;
+}
 .wrapper input[type=radio] {
 	display: none;
 }
@@ -58,7 +72,8 @@ p {
 
 .slider-item {
     display: inline-block;
-	margin-right: 0.625rem;
+	margin: 0.625rem;
+    
     
 }
 .meme-text-wrapper {
@@ -86,10 +101,10 @@ p {
     transform: translateX(-75%);
 }
 
-#first-pagginator:checked~ .meme-context > .slider > .slider-item:first-child label,
-#second-pagginator:checked~ .meme-context > .slider > .slider-item:nth-child(2) label,
-#third-pagginator:checked~.meme-context > .slider > .slider-item:nth-child(3) label,
-#fourth-pagginator:checked~.meme-context > .slider > .slider-item:last-child label {
+#first-pagginator:checked~ .meme-context > .slider > label:first-child .area,
+#second-pagginator:checked~ .meme-context > .slider > label:nth-child(2) .area,
+#third-pagginator:checked~.meme-context > .slider > label:nth-child(2) .area,
+#fourth-pagginator:checked~.meme-context > .slider > label:last-child .area {
     background-color: transparent;
 }
 #first-pagginator:checked~ .meme-context > .meme-text-wrapper > .meme-text {
