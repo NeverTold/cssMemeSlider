@@ -8,9 +8,12 @@ p {
 }
 .wrapper {
     padding: 1rem 2rem 1rem 2rem;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
 }
 .meme-img-wrapper {
-    width: 96vw;
+    min-width: 94vw;
     overflow: hidden;
 }
 .meme-img-list {
@@ -21,7 +24,7 @@ p {
 }
 .img img {
     border-radius: 1rem;
-    min-width: 96vw ;
+    width: 94vw ;
     max-height: 60vh;
 }
 .meme-context {
@@ -59,7 +62,7 @@ p {
     
 }
 .meme-text-wrapper {
-    min-width: 88vw;
+    width: 85vw;
     overflow: hidden;
 }
 .meme-text {
@@ -67,7 +70,7 @@ p {
     transition: transform 0.5s ease-in-out;
 }
 .text {
-    min-width: 89vw;
+    min-width: 100%;
     text-wrap: nowrap;
 }
 #first-pagginator:checked~.meme-img-wrapper > .meme-img-list {
@@ -90,7 +93,7 @@ p {
     background-color: transparent;
 }
 #first-pagginator:checked~ .meme-context > .meme-text-wrapper > .meme-text {
-    transform: translateX(0);
+    transform: translateX(0%);
 }
 #second-pagginator:checked~ .meme-context > .meme-text-wrapper > .meme-text {
     transform: translateX(-100%);
@@ -99,5 +102,20 @@ p {
     transform: translateX(-200%);
 }
 #fourth-pagginator:checked~.meme-context > .meme-text-wrapper > .meme-text {
-    transform: translateX(-301%);
+    transform: translateX(-300%);
+}
+
+@media (max-width: 500px) {
+    .meme-context {
+        flex-direction: column;
+    }
+    .slider {
+        justify-content: center;
+    }
+    .meme-img-wrapper {
+        min-width: 88vw ;
+    }
+    .img img {
+        width: 88vw ;
+    }
 }
