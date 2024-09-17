@@ -11,9 +11,10 @@ p {
     display: flex; 
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .meme-img-wrapper {
-    min-width: 94vw;
+    max-width: 94vw;
     overflow: hidden;
 }
 .meme-img-list {
@@ -28,6 +29,7 @@ p {
     max-height: 60vh;
 }
 .meme-context {
+    width: 100%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -77,7 +79,7 @@ p {
     
 }
 .meme-text-wrapper {
-    width: 85vw;
+    max-width: 85vw;
     overflow: hidden;
 }
 .meme-text {
@@ -128,7 +130,7 @@ p {
         justify-content: center;
     }
     .meme-img-wrapper {
-        min-width: 88vw ;
+        max-width: 88vw ;
     }
     .img img {
         width: 88vw ;
