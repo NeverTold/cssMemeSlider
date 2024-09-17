@@ -55,21 +55,12 @@ p {
     border-color: #ffffff;
     background-color: #ffffff;
 }
+.slider label:active .area{
+    background-color:#bcbdbe;
+    border-color:#bcbdbe;
+}
 .wrapper input[type=radio] {
 	display: none;
-}
-.slider-item label {
-	display: inline-block;
-	cursor: pointer;
-	border: 0.2em solid transparent;
-    padding: 0.5em;
-    border-radius: 1.5rem;
-    border-color: #71abff;
-    background-color: #71abff;
-}
-.slider-item label:hover {
-    border-color: #ffffff;
-    background-color: #ffffff;
 }
 
 .slider-item {
