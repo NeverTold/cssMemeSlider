@@ -96,7 +96,7 @@ p {
 
 #first-pagginator:checked~ .meme-context > .slider > label:first-child .area,
 #second-pagginator:checked~ .meme-context > .slider > label:nth-child(2) .area,
-#third-pagginator:checked~.meme-context > .slider > label:nth-child(2) .area,
+#third-pagginator:checked~.meme-context > .slider > label:nth-child(3) .area,
 #fourth-pagginator:checked~.meme-context > .slider > label:last-child .area {
     background-color: transparent;
 }
